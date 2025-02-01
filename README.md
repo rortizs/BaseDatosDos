@@ -1,8 +1,10 @@
 # BaseDatosDos
 
 ## Description Module 1
+
 this module is about definitions of transactions, states, properties, triggers, and events.
 this activity is about the definition of the following concepts:
+
 - Transactions
 - States
 - Properties
@@ -10,7 +12,9 @@ this activity is about the definition of the following concepts:
 - Events
 
 ## Description Module 2
+
 this module is about the definition of the concurrency control and the definition of the following concepts:
+
 - Concurrency Control
 - Problems fail update, dependency fail, lost update, and inconsistency
 - Locks
@@ -25,7 +29,9 @@ this module is about the definition of the concurrency control and the definitio
 - Atomicity
 
 ## Description Module 3
+
 this module is about the Backups and Recovery, Disponibility, and the definition of the following concepts:
+
 - Backups
 - Recovery
 - Disponibility
@@ -41,7 +47,9 @@ this module is about the Backups and Recovery, Disponibility, and the definition
 - Backup and recovery reports
 
 ## Description Module 4
+
 this module is about the definition of the security and the definition of the following concepts:
+
 - Security
 - Security threats
 - Security vulnerabilities
@@ -101,7 +109,9 @@ this module is about the definition of the security and the definition of the fo
 - Security monitoring
 
 ## Description Module 5
+
 this module is about the definition of the Data storage and multidimensional databases and the definition of the following concepts:
+
 - Data storage
 - Multidimensional databases
 - Data storage types
@@ -123,7 +133,9 @@ this module is about the definition of the Data storage and multidimensional dat
 - Data storage reports
   
 ## Description Module 6
+
 this module is about the definition of the Object database and the definition of the following concepts:
+
 - Object database
 - Object database types
 - Object database strategies
