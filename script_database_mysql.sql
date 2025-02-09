@@ -4,21 +4,19 @@ CREATE DATABASE IF NOT EXISTS `Central Bank` DEFAULT CHARACTER SET utf8 COLLATE 
 USE `Central Bank`;
 
 -- Table structure for table Centrals
-CREATE TABLE CENTRALS (
-    ID_CENTRAL INT NOT NULL AUTO_INCREMENT,
-    NAME_CENTRAL VARCHAR(50) NOT NULL,
-    ADDRESS_CENTRAL VARCHAR(50) NOT NULL,
-    PRIMARY KEY (ID_CENTRAL)
+--Tabel strcucture for centrals
+CREATE TABLE centrals(
+id_central INT NOT NULL IDENTITY(1,1) PRIMARY KEY, --PRIMARY KEY OF TABLE CENTRALS
+name_central VARCHAR(50) NOT NULL, --name of central (Guastatoya_tigo)
+address_central VARCHAR(50) NOT NULL, --address of central (Barrio la Democracia)
 );
 
--- Table structure for table Branch IS A RELATIONSHIP WITH CENTRALS
-CREATE TABLE BRANCHS (
-    ID_BRANCH INT NOT NULL AUTO_INCREMENT,
-    NAME_BRANCH VARCHAR(50) NOT NULL,
-    ADDRESS_BRANCH VARCHAR(50) NOT NULL,
-    ID_CENTRAL_BRANCH INT NOT NULL,
-    PRIMARY KEY (ID_BRANCH),
-    FOREIGN KEY (ID_CENTRAL) REFERENCES CENTRALS(ID_CENTRAL)
+--Table strcuture Branchs is a relationship with central
+CREATE TABLE branches(
+id_branch INT NOT NULL IDENTITY(1,1) PRIMARY KEY, --Primary key of table branches
+name_branch VARCHAR(50) NOT NULL, --name of branch (Sanarate_tigo)
+address_branch VARCHAR(50) NOT NULL, --address of branch (Avenida Arriaza)
+id_central_branch INT NOT NULL, --forening key of table central
+id_central INT FOREIGN KEY REFERENCES centrals(id_central) -- foreign key central
 );
-
 
