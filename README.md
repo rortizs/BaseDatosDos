@@ -5,7 +5,7 @@
 this module is about definitions of transactions, states, properties, triggers, and events.
 this activity is about the definition of the following concepts:
 
-- Transactions
+- Transactions 
 - States
 - Properties
 - Triggers

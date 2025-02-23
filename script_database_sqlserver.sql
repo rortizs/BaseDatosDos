@@ -66,7 +66,7 @@ CREATE TABLE accounts
 (
     id_account INT PRIMARY KEY IDENTITY(1,1),
     number_account NVARCHAR(10) UNIQUE NOT NULL,
-    type_account NVARCHAR(10) CHECK (type_account IN ('AHORRO', 'MONETARIA')),
+    type_account NVARCHAR(10) CHECK (type_account IN ('AHORRO', 'MONETARIA')), --type accounts 
     currency_account NVARCHAR(10) CHECK(currency_account IN ('USD', 'GTQ')),
     balance_account DECIMAL(18,2) DEFAULT 0.00 NOT NULL,
     id_account_holder_account INT NOT NULL, --FOREIGN KEY REFERENCES ACCOUNTS HOLDERS
@@ -81,7 +81,7 @@ CREATE TABLE accounts
 CREATE TABLE transacctions
 (
     id_transaction INT PRIMARY KEY IDENTITY(1,1),
-    type_transaction NVARCHAR(10) CHECK(type_transaction IN ('DEPOSITO', 'RETIRO')),
+    type_transaction NVARCHAR(10) CHECK(type_transaction IN ('DEPOSITO', 'RETIRO')), --type_transaction this deposite or retorno = 
     amount_transaction DECIMAL(18,2) DEFAULT 0.00 NOT NULL,
     id_account_transaction INT NOT NULL, --FOREIGN KEY REFERENCES ACCOUNTS
     id_atm_transaction INT NOT NULL, --FOREIGN KEY REFERENCES ATMS
@@ -164,6 +164,7 @@ CREATE PROCEDURE InsertCentral
     @phone_central  VARCHAR(50),   -- Teléfono del central
     @email_central  VARCHAR(100)  -- Email del central
 AS
+/*asegura la transacción para su insertar*/
 BEGIN
     SET NOCOUNT ON;  -- Evita la generación de mensajes de filas afectadas
 
